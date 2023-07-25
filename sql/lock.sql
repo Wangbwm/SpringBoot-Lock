@@ -11,7 +11,7 @@
  Target Server Version : 50742
  File Encoding         : 65001
 
- Date: 24/07/2023 17:37:54
+ Date: 25/07/2023 11:24:07
 */
 
 SET NAMES utf8mb4;
@@ -24,14 +24,8 @@ DROP TABLE IF EXISTS `distributed_locks`;
 CREATE TABLE `distributed_locks`  (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `lock_name` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL,
-  `version` int(11) NULL DEFAULT NULL,
-  `locked` tinyint(1) NOT NULL,
+  `version` int(11) NOT NULL,
   PRIMARY KEY (`id`) USING BTREE
-) ENGINE = InnoDB AUTO_INCREMENT = 2 CHARACTER SET = utf8 COLLATE = utf8_general_ci ROW_FORMAT = Dynamic;
-
--- ----------------------------
--- Records of distributed_locks
--- ----------------------------
-INSERT INTO `distributed_locks` VALUES (1, 'test', 1, 0);
+) ENGINE = InnoDB AUTO_INCREMENT = 13 CHARACTER SET = utf8 COLLATE = utf8_general_ci ROW_FORMAT = Dynamic;
 
 SET FOREIGN_KEY_CHECKS = 1;
