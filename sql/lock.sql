@@ -22,10 +22,10 @@ SET FOREIGN_KEY_CHECKS = 0;
 -- ----------------------------
 DROP TABLE IF EXISTS `distributed_locks`;
 CREATE TABLE `distributed_locks`  (
-  `id` int(11) NOT NULL AUTO_INCREMENT,
-  `lock_name` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL,
-  `version` int(11) NOT NULL,
-  PRIMARY KEY (`id`) USING BTREE
+                                      `id` int(11) NOT NULL AUTO_INCREMENT,
+                                      `lock_name` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL,
+                                      `version` int(11) NOT NULL,
+                                      PRIMARY KEY (`id`) USING BTREE
 ) ENGINE = InnoDB AUTO_INCREMENT = 13 CHARACTER SET = utf8 COLLATE = utf8_general_ci ROW_FORMAT = Dynamic;
 
 SET FOREIGN_KEY_CHECKS = 1;
